@@ -1,1 +1,1 @@
-# goland
+# golang practice projects
