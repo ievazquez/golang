@@ -25,7 +25,24 @@ func addAll( values ...int) int {
 	return sum
 }
 
+func FullName(first, last string) (string, int) {
+	full := first + " " + last
+	length := len(full)
+	return full, length
+}
+
+func FullNameNakedReturn(first, last string) (full string, length int) {
+	full = first + " " + last
+	length = len(full)
+	return
+}
+
+
 func main() {
 	doTest();
+	fullname, len := FullName("Carl","Johnson")
+	fmt.Printf("Full Name %v number of chars %v\n", fullname, len)
 
+	fullname2, len2 := FullNameNakedReturn("Arthur","Dent")
+	fmt.Printf("Full Name %v number of chars %v\n", fullname2, len2)
 }
