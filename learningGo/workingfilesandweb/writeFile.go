@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 )
 
@@ -21,4 +22,8 @@ func main() {
 	ln, err := io.WriteString(file, content)
 	checkError(err)
 	fmt.Printf("All done with fle of %v\n", ln)
+
+	bytes := [] byte(content)
+	ioutil.WriteFile("./fromBytes.txt", bytes, 0644)
+	
 }
